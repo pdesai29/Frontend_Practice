@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout Demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      aside {
+        flex: 1;
+        background-color: #ddd;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      article {
+        flex: 2;
+        background-color: #ccc;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .main-content {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        aside,
+        article {
+          flex: 1;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <div class="container">
+      <div class="main-content">
+        <aside>
+          <h2>Aside</h2>
+          <p>This is the aside content.</p>
+        </aside>
+        <article>
+          <h2>Article</h2>
+          <p>This is the article content.</p>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <h3>Footer</h3>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
